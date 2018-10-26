@@ -29,8 +29,8 @@ A step by step procedure that explains you have to get your development environm
 
 
 - **Import the SQL file** <br>
-	- Create a database named "**online-lucky-draw**"
-	- Go to IMPORT and import the "**luckydraw.sql**" file.
+	- Create a database named "**stochastic-decider**"
+	- Go to IMPORT and import the "**stochastic-decider.sql**" file.
 	- That's it. Done!
 
 

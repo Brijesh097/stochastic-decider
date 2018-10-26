@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand text-uppercase" href="index.php" style="font-weight: bold;">Ricochet</a>
+            <a class="navbar-brand text-uppercase" href="index.php" style="font-weight: bold;">Stochastic &nbsp;Decider</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -33,11 +33,11 @@
                 <?php } ?> -->
 
                 <li>
-                    <a href="registration.php" class="text-uppercase" style="font-size: 1.15em; font-weight: bold;">Sign Up</a>
+                    <a href="registration.php" class="text-uppercase" style="font-size: 1.15em; font-weight: bold;">Register</a>
                 </li>
 
                 <li>
-                    <a href="admin" class="text-uppercase" style="color: #f5f5f5; padding: 7px 15px 0px 8px;"><button class="btn btn-primary" type="submit" style="margin: 0px;"> &nbsp;ADMIN</button></a>
+                    <a href="../admin/index.php" class="text-uppercase" style="color: #f5f5f5; padding: 7px 15px 0px 8px;"><button class="btn btn-primary" type="submit" style="margin: 0px;"> &nbsp;ADMIN</button></a>
                 </li>
 
             </ul>

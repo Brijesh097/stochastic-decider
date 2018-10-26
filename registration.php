@@ -57,7 +57,7 @@
                                 } else {
 
                                     echo "<div class='text-center alert alert-danger' role='alert'>
-                                                <b>Oh Snap!</b> Fill all the fields.
+                                                <b>Oh Snap!</b> &nbsp;Fill all the fields.
                                           </div>";
 
                                 }
@@ -70,16 +70,16 @@
                                 <label for="username" class="sr-only">username</label>
                                 <input type="text" name="username" id="username" class="form-control" placeholder="Enter desired username">
                             </div>
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label for="email" class="sr-only">Email</label>
                                 <input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com">
                             </div>
-                             <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label for="password" class="sr-only">Password</label>
                                 <input type="password" name="password" id="key" class="form-control" placeholder="Enter new password">
-                            </div>
+                            </div> -->
                             <hr id="hr-style">
-                            <input type="submit" name="submit" id="btn-login" class="btn btn-primary btn-lg btn-block" value="Sign Up">
+                            <input type="submit" name="submit" id="btn-login" class="btn btn-primary btn-lg btn-block" value="Sign up for free!">
                         </form>
                      
                     </div>
