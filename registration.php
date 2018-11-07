@@ -25,10 +25,11 @@
                                 
                                 $username = mysqli_real_escape_string($connection, $_POST['username']);
                                 $email    = mysqli_real_escape_string($connection, $_POST['email']);
-                                $password = mysqli_real_escape_string($connection, $_POST['password']);
+                                // $password = mysqli_real_escape_string($connection, $_POST['password']);
 
-                                if (!empty($username) && !empty($email) && !empty($password)) {
+                                if (!empty($username) && !empty($email) ) {
                                     
+                                    /*
                                     $query = "SELECT randSalt FROM users";
                                     $select_randSalt_query = mysqli_query($connection, $query);
 
@@ -41,9 +42,10 @@
 
                                     // Encrypting password.
                                     $password = crypt($password, $salt);
+                                    */
 
-                                    $query  = "INSERT INTO users(username, user_email, user_password, user_role) ";
-                                    $query .= "VALUES ('$username', '$email', '$password', 'Subscriber')";
+                                    $query  = "INSERT INTO users(username, user_email, user_role) ";
+                                    $query .= "VALUES ('$username', '$email', 'Subscriber')";
 
                                     $register_query = mysqli_query($connection, $query);
                                     if (!$register_query) {

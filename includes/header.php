@@ -28,6 +28,14 @@
 
     <!-- Custom CSS -->
     <link href="css/blog-home.css" rel="stylesheet">
+    
+    <!-- FlipClock JS -->
+    <link rel="stylesheet" href="js/compiled/flipclock.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/compiled/flipclock.js"></script>
+
+    <!-- Countdown 2 -->
+    <!-- <script src="js/jquery.countdown.js"></script> -->
 
 </head>
 

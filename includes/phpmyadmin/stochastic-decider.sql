@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2018 at 08:41 PM
+-- Generation Time: Nov 07, 2018 at 12:12 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -135,7 +135,9 @@ INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_firstname`, `
 (3, 'Avicii', '$2y$10$iusesomecrazystrings2uGtDpLi/sz8giU0Qqyz0jXbOCxzug3S6', 'Tim', 'Bergling', 'avicii@ricochet.com', '', 'Subscriber', '$2y$10$iusesomecrazystrings22'),
 (5, 'Hailee', '$2y$10$iusesomecrazystrings2uXGII1UYRQCxKYw4FSfq6HURjwMgnGxW', 'Hailee', 'Steinfeld', 'hailee@ricochet.com', '', 'Admin', '$2y$10$iusesomecrazystrings22'),
 (6, 'Calvin', 'summer', 'Calvin', 'Harris', 'calvin@ricochet.com', '', 'Subscriber', '$2y$10$iusesomecrazystrings22'),
-(9, 'Martin', 'forbiddenvoices', 'Martin', 'Garrix', 'martin@ricochet.com', '', 'Subscriber', '$2y$10$iusesomecrazystrings22');
+(9, 'Martin', 'forbiddenvoices', 'Martin', 'Garrix', 'martin@ricochet.com', '', 'Subscriber', '$2y$10$iusesomecrazystrings22'),
+(10, 'Eminem', '$2y$10$iusesomecrazystrings2uR8abAawujIMn5rDnB90aJHLRoWwAvFm', '', '', 'eminem@stochastic.com', '', 'Subscriber', '$2y$10$iusesomecrazystrings22'),
+(11, 'Jennifer Lawrence', '', '', '', 'jennifer@stochastic.com', '', 'Subscriber', '$2y$10$iusesomecrazystrings22');
 
 -- --------------------------------------------------------
 
@@ -162,7 +164,10 @@ INSERT INTO `users_online` (`id`, `session`, `time`) VALUES
 (6, '2v06s7mgmimftc7dqg6pe8vhbl', 1518533360),
 (7, 'q0cdka80usv349q4aqq2om43bt', 1518533499),
 (8, 'jldrqedoin2p7vajofb074menr', 1518538375),
-(9, 'ucbibk8hgph8lbm8q150vdg1vu', 1518721159);
+(9, 'ucbibk8hgph8lbm8q150vdg1vu', 1518721159),
+(10, 'dd2ifvofh8i4rg32llai65b10d', 1540584871),
+(11, 'k9kngojel8mq38pcdmk24lhtd6', 1541532975),
+(12, '6ks16sbdcmngu2a8crkibnsjoh', 1541588821);
 
 --
 -- Indexes for dumped tables
@@ -224,13 +229,13 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `users_online`
 --
 ALTER TABLE `users_online`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
