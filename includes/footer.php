@@ -9,7 +9,7 @@
                     <p>&copy; Stochastic Decider | 2018</p>
                 </div>
                 <div class="col-lg-6">
-                    <p class="pull-right">Developed by <strong><a href="https://github.com/Brijesh097" target="_blank">Brijesh</a></strong></p>
+                    <p class="pull-right">Developed by <strong>Archit & Brijesh</strong></p>
                 </div>
             </div>
             <!-- /.row -->
