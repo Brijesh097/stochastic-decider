@@ -72,34 +72,41 @@
 
         <div class="well well-lg">
 
+<!--INSERT DATE-->
+<?php
+if(isset($_POST['set'])){
+    $month = $_POST['month'];
+    $date = $_POST['date'];
+    $year = $_POST['year'];
+    
+    $query="INSERT INTO timer(month,date,year)VALUE('$month','$date','$year')";
+    $insert_date = mysqli_query($connection,$query);
+}   ?>
 
           <!-- FlipClock -->
-          <div class="clock" style="margin:2em;"></div>
-          <div class="clck"></div>
-
-          <script type="text/javascript">
-            var clock;
-            
-            $(document).ready(function() {
-              var clock;
-
-              clock = $('.clock').FlipClock({
-                    clockFace: 'DailyCounter',
-                    autoStart: false,
-                    callbacks: {
-                      stop: function() {
-                        $('.clck').html('The clock has stopped!')
-                      }
-                    }
-                });
-                    
-                clock.setTime(220880);
-                clock.setCountdown(true);
-                clock.start();
-
-            });
-          </script>
-
+          
+  <!-- For Timer -->
+  <center>
+    <div id="clockdiv">
+      <div>
+        <span id="day"></span>
+        <div class="smalltext">Days</div>
+      </div>
+      <div>
+        <span id="hour"></span>
+        <div class="smalltext">Hours</div>
+      </div>
+      <div>
+        <span id="min"></span>
+        <div class="smalltext">Minutes</div>
+      </div>
+      <div>
+        <span id="sec"></span>
+        <div class="smalltext">Seconds</div>
+      </div>
+    </div>
+  </center>
+  <!--End of Timer-->
 
           <!-- Countdown 2 -->
           <!-- <script type="text/javascript">require('jquery-countdown');</script>
@@ -119,54 +126,27 @@
         </div>
 
         <div class="row">
+                
+            <?php 
+        
+        $query = "SELECT * FROM prize";
+        $show_prize=mysqli_query($connection,$query);
+        while($row=mysqli_fetch_assoc($show_prize))
+        {
+            $prize_image = $row['prize_image'];
+            $prize_text = $row['prize_text'];
+            
+            ?>              
+                    <div class="col-md-3 col-lg-3">
+                       
+                           <img id="image" class="img-responsive" src="images/<?php echo $prize_image;?>" alt="" >
+                           <p><?php echo $prize_text;?></p>                                          
+                    </div>             
 
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-              <img class="img-responsive" src="images/carrera.jpg" alt="Carrera GTS 911">
-              <div class="caption">
-                <h3><strong>Carrera GTS 911</strong></h3>
-                <h3>
-                  <strong><code>$120,050</code></strong>
-                </h3>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-              <img class="img-responsive" src="images/space_travel.jpg" alt="Space Travel">
-              <div class="caption">
-                <h3><strong>Space Travel</strong></h3>
-                <h3>
-                  <strong><code>$250,000</code></strong>
-                </h3>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-              <img class="img-responsive" src="images/norway.jpg" alt="Norway">
-              <div class="caption">
-                <h3><strong>Norway Trip</strong></h3>
-                <h3>
-                  <strong><code>$3500</code></strong>
-                </h3>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-              <img class="img-responsive" src="images/concert.jpg" alt="Concert">
-              <div class="caption">
-                <h3><strong>Concert Ticket</strong></h3>
-                <h3>
-                  <strong><code>$1400</code></strong>
-                </h3>
-              </div>
-            </div>
-          </div>
+            <?php
+        }
+       
+        ?>
 
         </div>
 
@@ -177,28 +157,30 @@
         </div>
 
          <div class="row" align="center">
-
+  <?php 
+             $query = "SELECT * FROM winner";
+             $show_winner = mysqli_query($connection,$query);
+             while($row=mysqli_fetch_assoc($show_winner))
+             {
+                 $winner_name = $row['winner_name'];
+                 $winner_photo = $row['winner_photo'];
+                
+             
+             ?>
           <div class="col-sm-6 col-md-6">
-            <div class="thumbnail">
-              <img src="..." alt="...">
-              <div class="caption">
-                <h3>Thumbnail label</h3>
-                <p>...</p>
-                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    <div class="thumbnail">
+                    <img id="image" class="img-responsive" src="images/<?php echo $winner_photo;?>" alt="" >
+                      <p><?php echo $winner_name?></p>
+           
+              
+          
+                
               </div>
             </div>
+            <?php } ?>
           </div>
 
-          <div class="col-sm-6 col-md-6">
-            <div class="thumbnail">
-              <img src="..." alt="...">
-              <div class="caption">
-                <h3>Thumbnail label</h3>
-                <p>...</p>
-                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-              </div>
-            </div>
-          </div>
+      
 
         </div>
 

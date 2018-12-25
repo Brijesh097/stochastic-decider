@@ -9,7 +9,7 @@
                     <p>&copy; Stochastic Decider | 2018</p>
                 </div>
                 <div class="col-lg-6">
-                    <p class="pull-right">Developed by <strong>Archit & Brijesh</strong></p>
+                    <p class="pull-right">Developed by <strong>Archit & Brijesh & Visakha</strong></p>
                 </div>
             </div>
             <!-- /.row -->
@@ -19,10 +19,13 @@
     <!-- /.container -->
 
     <!-- jQuery -->
+     
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    
+
 
 </body>
 

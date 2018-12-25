@@ -37,7 +37,7 @@
                 </li>
 
                 <li>
-                    <a href="../admin/index.php" class="text-uppercase" style="color: #f5f5f5; padding: 7px 15px 0px 8px;"><button class="btn btn-primary" type="submit" style="margin: 0px;"> &nbsp;ADMIN</button></a>
+                    <a href="admin_login.php" class="text-uppercase" style="color: #f5f5f5; padding: 7px 15px 0px 8px;"><button class="btn btn-primary" type="submit" style="margin: 0px;"> &nbsp;ADMIN</button></a>
                 </li>
 
             </ul>
