@@ -1,6 +1,16 @@
 <?php include 'includes/admin_header.php'?>
 
+    <!--INSERT DATE-->
+<?php
+if(isset($_POST['set'])){
+    $month = $_POST['month'];
+    $date = $_POST['date'];
+    $year = $_POST['year'];
     
+    $query="INSERT INTO timer(month,date,year)VALUE('$month','$date','$year')";
+    $insert_date = mysqli_query($connection,$query);
+}   ?>
+
 
     <div id="wrapper">
 
@@ -21,7 +31,7 @@
                      
                     </div>
                     <div class="col-lg-6">
-                        <form action="../index.php" method="post">
+                        <form action="../admin/index.php" method="post">
                            <label for="month">Month</label>
                             <input type="text" name="month">
                              <label for="date">Date</label>
@@ -132,47 +142,29 @@
 </div>
                 <!-- /.row -->
                 
-                <div class="row">
-                    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Data', 'count'],
-            <?php
-            $element_text = ['All members',' All prizes','All Winners'];
- $element_count =[$user_count,$prize_count,$winner_count];
-            
-            for($i =0;$i <3; $i++)
-            {
-                echo "['{$element_text[$i]}'" ."," ."{$element_count[$i]}],";
-            }
-            
-            
-            ?>
-            
-            
-
-            
-//          ['Posts', 1000],
-         
-        ]);
-
-        var options = {
-          chart: {
-            title: ' ',
-            subtitle: '',
-          }
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
-                <div id="columnchart_material" style="width: auto; height: 500px;"></div>
-                </div>
+              
+  <!-- For Timer -->
+  <center>
+    <div id="clockdiv">
+      <div>
+        <span id="day"></span>
+        <div class="smalltext">Days</div>
+      </div>
+      <div>
+        <span id="hour"></span>
+        <div class="smalltext">Hours</div>
+      </div>
+      <div>
+        <span id="min"></span>
+        <div class="smalltext">Minutes</div>
+      </div>
+      <div>
+        <span id="sec"></span>
+        <div class="smalltext">Seconds</div>
+      </div>
+    </div>
+  </center>
+  <!--End of Timer-->
             </div>
             <!-- /.container-fluid -->
 
