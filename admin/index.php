@@ -119,7 +119,7 @@ if(isset($_POST['set'])){
                     <div class="col-xs-9 text-right">
                   <?php 
                         
-                        $query = "SELECT * FROM winner";
+                        $query = "SELECT DISTINCT winner_name FROM winner";
                         $select_all_winner = mysqli_query($connection,$query);
                         $winner_count = mysqli_num_rows($select_all_winner);
 

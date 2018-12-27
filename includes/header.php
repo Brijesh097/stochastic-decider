@@ -27,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css">
 
     <!-- Custom CSS -->
-    <link href="css/blog-home.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
     
     <!-- FlipClock JS -->
     <link rel="stylesheet" href="js/compiled/flipclock.css">
