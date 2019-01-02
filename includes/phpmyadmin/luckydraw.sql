@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 27, 2018 at 10:14 AM
+-- Generation Time: Jan 02, 2019 at 06:14 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -54,6 +54,28 @@ INSERT INTO `member` (`id`, `name`, `user_role`, `email`, `contact`, `password`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `message`
+--
+
+CREATE TABLE `message` (
+  `message_id` int(3) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `message` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `message`
+--
+
+INSERT INTO `message` (`message_id`, `name`, `email`, `message`) VALUES
+(1, 'asd', 'sad@gmail.com', 'asdada'),
+(2, 'asd', 'sad@gmail.com', 'asdada'),
+(3, 'asd', 'sad@gmail.com', 'asdada');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `prize`
 --
 
@@ -91,7 +113,8 @@ CREATE TABLE `timer` (
 --
 
 INSERT INTO `timer` (`id`, `month`, `date`, `year`) VALUES
-(20, 'Jan', '12', '2019');
+(20, 'Jan', '12', '2019'),
+(21, 'Feb', '1', '2019');
 
 -- --------------------------------------------------------
 
@@ -127,7 +150,9 @@ INSERT INTO `winner` (`winner_id`, `winner_name`, `winner_email`, `winner_photo`
 (97, 'Cara Delevingne', 'cara@luckydraw.com', 'Black Apple Logo 01.jpg'),
 (98, '', '', ''),
 (99, '', '', ''),
-(100, 'Eminem', 'eminem@luckdraw.com', 'Mercy.jpg');
+(100, 'Eminem', 'eminem@luckdraw.com', 'Mercy.jpg'),
+(101, 'Brijesh', 'brijesh@luckydraw.com', 'Programmer 01.jpg'),
+(102, 'Eminem', 'eminem@luckdraw.com', 'Mercy.jpg');
 
 --
 -- Indexes for dumped tables
@@ -138,6 +163,12 @@ INSERT INTO `winner` (`winner_id`, `winner_name`, `winner_email`, `winner_photo`
 --
 ALTER TABLE `member`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `message`
+--
+ALTER TABLE `message`
+  ADD PRIMARY KEY (`message_id`);
 
 --
 -- Indexes for table `prize`
@@ -168,6 +199,12 @@ ALTER TABLE `member`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `message`
+--
+ALTER TABLE `message`
+  MODIFY `message_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `prize`
 --
 ALTER TABLE `prize`
@@ -177,13 +214,13 @@ ALTER TABLE `prize`
 -- AUTO_INCREMENT for table `timer`
 --
 ALTER TABLE `timer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `winner`
 --
 ALTER TABLE `winner`
-  MODIFY `winner_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `winner_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
