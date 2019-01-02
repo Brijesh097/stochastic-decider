@@ -16,7 +16,7 @@
             <ul class="nav navbar-nav navbar-right">
 
                 <!-- PHP for displaying the categories dynamically for the database -->
-                <!-- <?php 
+                <!-- <?php
 
                     $query = "SELECT * FROM categories";
                     $show_data_from_categories = mysqli_query($connection, $query);
@@ -38,6 +38,10 @@
 
                 <li>
                     <a href="admin_login.php" class="text-uppercase" style="color: #f5f5f5; padding: 7px 15px 0px 8px;"><button class="btn btn-primary" type="submit" style="margin: 0px;"> &nbsp;ADMIN</button></a>
+                </li>
+
+                <li>
+                    <a href="contact.php" class="text-uppercase" style="color: #f5f5f5; padding: 7px 15px 0px 8px;"><button class="btn btn-info" type="submit" style="margin: 0px;"> &nbsp;Contact_Us</button></a>
                 </li>
 
             </ul>
