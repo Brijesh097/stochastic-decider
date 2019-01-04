@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2019 at 06:14 PM
+-- Generation Time: Jan 04, 2019 at 07:52 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -35,21 +35,26 @@ CREATE TABLE `member` (
   `email` varchar(255) NOT NULL,
   `contact` int(11) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `profile_photo` varchar(255) NOT NULL
+  `profile_photo` varchar(255) NOT NULL,
+  `card_number` int(11) NOT NULL,
+  `cvv` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `member`
 --
 
-INSERT INTO `member` (`id`, `name`, `user_role`, `email`, `contact`, `password`, `profile_photo`) VALUES
-(3, 'Brijesh', 'admin', 'brijesh@luckydraw.com', 2147483647, '$2y$12$okXaX/N/OL/mgeQ1549s6eTiMZ3ymw2I8fECSWF8NJwrWRLiB60/G', 'Programmer 01.jpg'),
-(4, 'Cara Delevingne', 'subscriber', 'cara@luckydraw.com', 2147483647, '$2y$12$ozo/6q.6o3oZxDgBS1SU9eBm/2TTNHLniz2ql52WTI0yhUOp4lFve', 'Black Apple Logo 01.jpg'),
-(5, 'Eminem', 'subscriber', 'eminem@luckdraw.com', 192837465, '$2y$12$YMQ7k5vn1G6ysATnNfEnhuYcpJzgmQIIIHfKo5dxSxB4Fadj5GRy6', 'Mercy.jpg'),
-(6, 'Archit', 'admin', 'Archit@luckydraw.com', 12345678, '$2y$12$kX3yJeTM0yeeutYTTx6TfOyxWGl6tS0MUr6Io2Le.qGIAdOg.aC2a', ''),
-(7, 'aa', 'admin', 'aa@gmail.com', 0, '$2y$12$TDuz67uDX7J5/orz3wxQgOzcldc01.LtMWhvOX2/1So2v.8x8SHVu', ''),
-(8, 'abc', 'subscriber', 'abc@gmail.com', 0, '$2y$12$E5uhiRf8FnW5aIjg.4GXIegvB7XySEwY9GoE2POpl.9KfYJdf46/q', ''),
-(9, 'studyleague', 'admin', 'studyleague@gmail.com', 0, '$2y$12$DO6J8XYkvvkHc7mzPUzEwOfjTA8NWmMqnwj1izoz1fpnVcr77vunC', '');
+INSERT INTO `member` (`id`, `name`, `user_role`, `email`, `contact`, `password`, `profile_photo`, `card_number`, `cvv`) VALUES
+(3, 'Brijesh', 'admin', 'brijesh@luckydraw.com', 2147483647, '$2y$12$okXaX/N/OL/mgeQ1549s6eTiMZ3ymw2I8fECSWF8NJwrWRLiB60/G', 'Programmer 01.jpg', 0, 0),
+(4, 'Cara Delevingne', 'subscriber', 'cara@luckydraw.com', 2147483647, '$2y$12$ozo/6q.6o3oZxDgBS1SU9eBm/2TTNHLniz2ql52WTI0yhUOp4lFve', 'Black Apple Logo 01.jpg', 0, 0),
+(5, 'Eminem', 'subscriber', 'eminem@luckdraw.com', 192837465, '$2y$12$YMQ7k5vn1G6ysATnNfEnhuYcpJzgmQIIIHfKo5dxSxB4Fadj5GRy6', 'Mercy.jpg', 0, 0),
+(6, 'Archit', 'admin', 'Archit@luckydraw.com', 12345678, '$2y$12$kX3yJeTM0yeeutYTTx6TfOyxWGl6tS0MUr6Io2Le.qGIAdOg.aC2a', '', 0, 0),
+(7, 'aa', 'admin', 'aa@gmail.com', 0, '$2y$12$TDuz67uDX7J5/orz3wxQgOzcldc01.LtMWhvOX2/1So2v.8x8SHVu', '', 0, 0),
+(8, 'abc', 'subscriber', 'abc@gmail.com', 0, '$2y$12$E5uhiRf8FnW5aIjg.4GXIegvB7XySEwY9GoE2POpl.9KfYJdf46/q', '', 0, 0),
+(9, 'studyleague', 'admin', 'studyleague@gmail.com', 0, '$2y$12$DO6J8XYkvvkHc7mzPUzEwOfjTA8NWmMqnwj1izoz1fpnVcr77vunC', '', 0, 0),
+(10, 'asd', 'subscriber', 'asd@gmail.com', 6516161, '$2y$12$cAUMr4uhbIbaOpv0TnYIv.kxXJtWqtwb9vyUw5VYfzx9Yf8xWVJTa', '', 0, 0),
+(11, 'asd', 'subscriber', 'sad@gmail.com', 23213, '$2y$12$x.8OIYoFc7zroiSHsVNPNepOm1zZ9txqywl8ZIyLrZcvqkJfAup2G', '', 0, 0),
+(12, 'asd', 'subscriber', 'sad@gmail.com', 231, '$2y$12$/RMAz/MlZqyML9GHFJsOTOQDn9dWZU8YBQjrdyTIXDPq4qdcX4SAe', '', 12312331, 156);
 
 -- --------------------------------------------------------
 
@@ -114,7 +119,9 @@ CREATE TABLE `timer` (
 
 INSERT INTO `timer` (`id`, `month`, `date`, `year`) VALUES
 (20, 'Jan', '12', '2019'),
-(21, 'Feb', '1', '2019');
+(21, 'Feb', '1', '2019'),
+(22, 'Jan', '5', '2019'),
+(23, 'Jan', '5', '2019');
 
 -- --------------------------------------------------------
 
@@ -152,7 +159,14 @@ INSERT INTO `winner` (`winner_id`, `winner_name`, `winner_email`, `winner_photo`
 (99, '', '', ''),
 (100, 'Eminem', 'eminem@luckdraw.com', 'Mercy.jpg'),
 (101, 'Brijesh', 'brijesh@luckydraw.com', 'Programmer 01.jpg'),
-(102, 'Eminem', 'eminem@luckdraw.com', 'Mercy.jpg');
+(102, 'Eminem', 'eminem@luckdraw.com', 'Mercy.jpg'),
+(103, '', '', ''),
+(104, 'Cara Delevingne', 'cara@luckydraw.com', 'Black Apple Logo 01.jpg'),
+(105, '', '', ''),
+(106, 'Cara Delevingne', 'cara@luckydraw.com', 'Black Apple Logo 01.jpg'),
+(107, 'Cara Delevingne', 'cara@luckydraw.com', 'Black Apple Logo 01.jpg'),
+(108, 'Cara Delevingne', 'cara@luckydraw.com', 'Black Apple Logo 01.jpg'),
+(109, 'Brijesh', 'brijesh@luckydraw.com', 'Programmer 01.jpg');
 
 --
 -- Indexes for dumped tables
@@ -196,7 +210,7 @@ ALTER TABLE `winner`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `message`
@@ -214,13 +228,13 @@ ALTER TABLE `prize`
 -- AUTO_INCREMENT for table `timer`
 --
 ALTER TABLE `timer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `winner`
 --
 ALTER TABLE `winner`
-  MODIFY `winner_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+  MODIFY `winner_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
