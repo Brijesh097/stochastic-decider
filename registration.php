@@ -26,7 +26,7 @@
     <div class="input-group-addon">
      <span class="glyphicon glyphicon-user"></span>
      </div>
-      <input type="text" name="name" class="form-control"  style="width:300px;" placeholder="Enter your Name">
+      <input type="text" name="name" class="form-control"  style="width:300px;" placeholder="Enter your Name" required>
     </div>
     </div>
     <div class="form-group">
@@ -35,7 +35,7 @@
     <div class="input-group-addon">
       <span class="glyphicon glyphicon-envelope"></span>
       </div>
-      <input type="email"  name="email" class="form-control"  placeholder="Email" style="width:300px;">
+      <input type="email"  name="email" class="form-control"  placeholder="Email" style="width:300px;" required>
     </div>
   </div>
   <div class="form-group">
@@ -45,7 +45,7 @@
     
      <span><i class="fa fa-phone cust"></i></span>
      </div>
-      <input type="text" name="contact" class="form-control"  placeholder="Contact" style="width:300px;">
+      <input type="text" name="contact" class="form-control"  placeholder="Contact" style="width:300px;" required>
     </div>
   </div>
   <div class="form-group">
@@ -54,7 +54,7 @@
      <div class="input-group-addon">
       <span><i class="fa fa-key"></i></span>
       </div>
-      <input type="password" name="password" class="form-control"  placeholder="Password" style="width:300px;">
+      <input type="password" name="password" class="form-control"  placeholder="Password" style="width:300px;" required>
     </div>
   </div>
 
@@ -65,8 +65,8 @@
             <div class="input-group-addon">
                 <span><i class="fa fa-user-tie"></i></span>
             </div>
-            <input type="number" name="card_number" class="form-control" placeholder="Enter your card number" style="width:300px;"><br><br>
-            <input type="password" name="cvv" class="form-control" placeholder="Enter your CVV" style="width:300px;">
+            <input type="number" name="card_number" class="form-control" placeholder="Enter your card number" style="width:300px;" required><br><br>
+            <input type="password" name="cvv" class="form-control" placeholder="Enter your CVV" style="width:300px;" required>
         </div>
     </div>
     <!-- ./End of payment section -->
