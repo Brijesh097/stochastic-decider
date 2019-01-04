@@ -82,7 +82,7 @@ var x = setInterval(function() {
         clearInterval(x);
 		document.getElementById("clockdiv").innerHTML =
 		 "The Winner is <?php 
-			 $random = rand(1,5);
+			 $random = rand(3,9);
 			 $query = "SELECT * from member WHERE id ='$random'";
 			 $result = mysqli_query($connection,$query);
            

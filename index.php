@@ -152,7 +152,8 @@ if(isset($_POST['set'])){
 }   ?>
 
           <!-- FlipClock -->
-          
+          <h1 class="text-center" style="font-weight:bolder">Winners will be declared in
+          </h1>
   <!-- For Timer -->
   <center>
     <div id="clockdiv">

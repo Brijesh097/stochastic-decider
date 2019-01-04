@@ -13,8 +13,7 @@ if(isset($_POST['register'])) {
     $email      =  $_POST['email'];
     $password   =  $_POST['password'];
     $contact    =  $_POST['contact'];
-    $card    =  $_POST['card_number'];
-    $cv    =  $_POST['cvv'];
+   
     $user_role  =  "subscriber";
 
     if(!empty($name) && !empty($email) && !empty($password)) {
@@ -23,12 +22,11 @@ if(isset($_POST['register'])) {
         $email     =  mysqli_real_escape_string($connection,$email);
         $password  =  mysqli_real_escape_string($connection,$password);
         $contact   =  mysqli_real_escape_string($connection,$contact);
-        $card_number   =  mysqli_real_escape_string($connection,$card);
-        $cvv   =  mysqli_real_escape_string($connection,$cv);
+      
         $password  =  password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
 
-        $query = "INSERT INTO member (name, email, contact, password, profile_photo, user_role,card_number,cvv) ";
-        $query .= "VALUES('{$name}','{$email}','{$contact}','{$password}','{$image}', '{$user_role}','{$card_number}','{$cvv}')";
+        $query = "INSERT INTO member (name, email, contact, password, profile_photo, user_role) ";
+        $query .= "VALUES('{$name}','{$email}','{$contact}','{$password}','{$image}', '{$user_role}')";
 
         $registration_user_query = mysqli_query($connection,$query);
         if(!$registration_user_query) {
@@ -37,8 +35,11 @@ if(isset($_POST['register'])) {
             mysqli_error($connection);
 
         } else {
-
-            header('Location: ../index.php');
+        
+          echo "<script>alert('Registration done!');
+           window.open('../index.php','_self');</script>";
+//         header('Location: ../index.php');
+           
 
         }
         

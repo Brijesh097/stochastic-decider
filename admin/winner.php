@@ -52,7 +52,7 @@ if(isset($_GET['delete']))
               <tbody>
                <?php 
 
-								$query = "SELECT * FROM winner";
+								$query ="SELECT DISTINCT winner_id, winner_name, winner_email, winner_photo FROM winner WHERE winner_name!=''";
 				                $show_data_from_prize = mysqli_query($connection, $query);
 
 				                while ($row = mysqli_fetch_assoc($show_data_from_prize)) {
@@ -60,13 +60,13 @@ if(isset($_GET['delete']))
 				                    $winner_id  	=  $row['winner_id'];
 				                    $winner_name  	=  $row['winner_name'];
 				                    $winner_email  	=  $row['winner_email'];
-				                   
-				                   
-
+				                    $winner_photo 	=  $row['winner_photo'];
+                                  
 				                    echo "<tr>";
 				                    echo "<td>$winner_id</td>";
 				                    echo "<td>$winner_name</td>";
 				                    echo "<td>$winner_email</td>";
+				                    echo "<td>$winner_photo</td>";
 				             
 				                    
 

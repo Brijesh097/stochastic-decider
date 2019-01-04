@@ -61,13 +61,7 @@
     <!-- Payment section -->
     <div class="form-group">
         <label for="pay">Pay ₹100</label>
-        <div class="input-group">
-            <div class="input-group-addon">
-                <span><i class="fa fa-user-tie"></i></span>
-            </div>
-            <input type="number" name="card_number" class="form-control" placeholder="Enter your card number" style="width:300px;" required><br><br>
-            <input type="password" name="cvv" class="form-control" placeholder="Enter your CVV" style="width:300px;" required>
-        </div>
+        <a href="#">Click here</a>
     </div>
     <!-- ./End of payment section -->
 
