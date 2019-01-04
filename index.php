@@ -226,7 +226,7 @@ if(isset($_POST['set'])){
 
          <div class="row" align="center">
   <?php 
-             $query = "SELECT DISTINCT winner_name, winner_photo FROM winner";
+             $query = "SELECT DISTINCT winner_name, winner_photo FROM winner WHERE winner_name!=''";
              $show_winner = mysqli_query($connection,$query);
              while($row=mysqli_fetch_assoc($show_winner))
              {
